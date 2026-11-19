@@ -162,6 +162,8 @@ PanelSettings: ## just for choreonoid
       parts: [plate_2_2, plate_2_3, plate_2_4, plate_2_6, plate_2_8, plate_2_10,
               plate_1_1, plate_1_2, plate_1_3, plate_1_4, plate_1_6, plate_1_8,
               plate_4_4, plate_4_8, plate_6_12]
+    - name: Hand Parts
+      parts: [hone, base, cover, yubi_r, yubi_l]
     # - name: Servo Parts (AX-series)
     #   parts: [ax-12a, mx-12w, ax-12a-f2, ax-12a-f3, ax-12a-f3-p, ax-12a-f3-s, ax-12a-f3-s_3x3, FP04-F4, FP04-F4-P, FP04-F2-P, FP04-F2-S, FP04-F2-P_3x3, P04-F53, P04-F53-s, omni-shaft]
   combo_list: [ block_1_12, block_1_16, block_1_1_3, block_1_2_2, block_1_2_5, block_1_3_5, plate_2_12, plate_2_14, plate_2_16, plate_1_5, plate_1_10, plate_1_12, plate_3_3, plate_4_6, plate_4_10, plate_4_12, plate_6_6, plate_6_16, plate_8_8, plate_8_16, plate_16_16 ]
@@ -21262,3 +21264,192 @@ PartsSettings:
     #     rotation: [0., 0.70710678118655, -0.70710678118655 , 180]
     #     # rotation: [0., 1, 0 , 0]
 ###
+
+
+  -
+    type: hone
+    class: Hone
+    description: Hand component
+    visual:
+      -
+        type: mesh
+        url: "meshes_vis/hand_fin/hone.stl"
+        scale: 0.001
+    connecting-points:
+      -
+        name: horn_connect
+        types: [HORN_X]
+        translation: [0.0, 0.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+      -
+        name: yubi_mount_1
+        types: [M2_HOLE]
+        translation: [-4.24264, -4.24264, 4.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: yubi_mount_2
+        types: [M2_HOLE]
+        translation: [4.24264, -4.24264, 4.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: yubi_mount_3
+        types: [M2_HOLE]
+        translation: [-4.24264, 4.24264, 4.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: yubi_mount_4
+        types: [M2_HOLE]
+        translation: [4.24264, 4.24264, 4.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+  -
+    type: base
+    class: Base
+    description: Hand base component
+    visual:
+      -
+        type: mesh
+        url: "meshes_vis/hand_fin/base.stl"
+        scale: 0.001
+    connecting-points:
+      -
+        name: servo_mount_1
+        types: [FRAME_BSIDE_X]
+        translation: [4.75, -11.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: servo_mount_2
+        types: [FRAME_BSIDE_X]
+        translation: [20.75, -11.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: servo_mount_3
+        types: [FRAME_ASIDE_X]
+        translation: [-19.25, 11.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+        
+      -
+        name: servo_mount_4
+        types: [FRAME_BSIDE_X]
+        translation: [4.75, 11.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: servo_mount_5
+        types: [FRAME_BSIDE_X]
+        translation: [20.75, 11.0, 0.0]
+        rotation: [0.0, 0.0, 1.0, 270.0]
+
+      -
+        name: servo_mount_6
+        types: [FRAME_BSIDE_X]
+        translation: [-19.25, -11.0, 0.0]
+        rotation: [0.0, 0.0, 1.0, 90.0]
+        
+      -
+        name: yubi_l_center
+        types: [HORN_X]
+        translation: [-13.75, 0.0, 5.8]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: cover_hole_1
+        types: [M2_HOLE]
+        translation: [-25.0, -18.0, 3.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: cover_hole_2
+        types: [M2_HOLE]
+        translation: [0.0, 20.0, 3.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: cover_hole_3
+        types: [M2_HOLE]
+        translation: [25.0, -18.0, 3.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+  -
+    type: cover
+    class: Cover
+    description: Cover component
+    visual:
+      -
+        type: mesh
+        url: "meshes_vis/hand_fin/cover.stl"
+        scale: 0.001
+    connecting-points:
+      -
+        name: mount_1
+        types: [M2_HOLE]
+        translation: [0.0, 20.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: mount_2
+        types: [M2_HOLE]
+        translation: [-25.0, -18.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+      -
+        name: mount_3
+        types: [M2_HOLE]
+        translation: [25.0, -18.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+      -
+        name: horn_center
+        types: [HORN_X]
+        translation: [0.0, -30.0, 8.25]
+        rotation: [1.0, 0.0, 0.0, 270.0]
+
+  -
+    type: yubi_r
+    class: Yubi_R
+    description: Right gear component
+    visual:
+      -
+        type: mesh
+        url: "meshes_vis/hand_fin/yubi_r.stl"
+        scale: 0.001
+    connecting-points:
+      -
+        name: hole_1
+        types: [M2_HOLE]
+        translation: [5.196, 3.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+      -
+        name: hole_2
+        types: [M2_HOLE]
+        translation: [3.0, -5.196, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+      -
+        name: hole_3
+        types: [M2_HOLE]
+        translation: [-3.0, 5.196, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+      -
+        name: hole_4
+        types: [M2_HOLE]
+        translation: [-5.196, -3.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]
+
+  -
+    type: yubi_l
+    class: Yubi_L
+    description: Left gear component
+    visual:
+      -
+        type: mesh
+        url: "meshes_vis/hand_fin/yubi_l.stl"
+        scale: 0.001
+    connecting-points:
+      -
+        name: base_center
+        types: [ROTOR_X]
+        translation: [0.0, 0.0, 0.0]
+        rotation: [1.0, 0.0, 0.0, 0.0]

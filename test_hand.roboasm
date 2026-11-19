@@ -1,0 +1,47 @@
+history:
+  -
+    initial-parts: true
+    parts-name: XL-430_2436_3
+    parts-type: XL-430
+  -
+    parent: XL-430_2436_3
+    parent-point: right-side
+    parts-name: base_2436_4
+    parts-point: servo_mount_6
+    parts-type: base
+  -
+    parent: XL-430_2436_3
+    parent-point: horn
+    parts-name: hone_2436_5
+    parts-point: horn_connect
+    parts-type: hone
+  -
+    parent: base_2436_4
+    parent-point: yubi_l_center
+    parts-name: yubi_l_2436_8
+    parts-point: base_center
+    parts-type: yubi_l
+  -
+    connecting-offset:
+      rotation: [ 0.000000000000, 0.000000000000, 1.000000000000, 1.570796326795 ]
+    parent: hone_2436_5
+    parent-point: yubi_mount_2
+    parts-name: yubi_r_2436_7
+    parts-point: hole_4
+    parts-type: yubi_r
+  -
+    parent: base_2436_4
+    parent-point: cover_hole_2
+    parts-name: cover_2436_6
+    parts-point: mount_1
+    parts-type: cover
+  -
+    connecting-offset:
+      rotation: [ 0.000000000000, 0.000000000000, 1.000000000000, 1.570796326795 ]
+    parent: cover_2436_6
+    parent-point: horn_center
+    parts-name: XL-430_2436_9
+    parts-point: horn
+    parts-type: XL-430
+robot-info:
+  name: AssembleRobot
